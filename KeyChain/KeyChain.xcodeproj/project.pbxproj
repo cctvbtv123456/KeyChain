@@ -13,6 +13,10 @@
 		04B7379B20FF370300A1E138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B7379A20FF370300A1E138 /* Assets.xcassets */; };
 		04B7379E20FF370300A1E138 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B7379C20FF370300A1E138 /* LaunchScreen.storyboard */; };
 		04B737A120FF370300A1E138 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B737A020FF370300A1E138 /* main.m */; };
+		04B737AB20FF377900A1E138 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B737AA20FF377900A1E138 /* KeychainWrapper.m */; };
+		04B737AE20FF379100A1E138 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B737AD20FF379100A1E138 /* Security.framework */; };
+		04B737B320FF387D00A1E138 /* JTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B737AF20FF387D00A1E138 /* JTBaseViewController.m */; };
+		04B737B420FF387D00A1E138 /* JTDetailAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B737B020FF387D00A1E138 /* JTDetailAccountViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,15 @@
 		04B7379D20FF370300A1E138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B7379F20FF370300A1E138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B737A020FF370300A1E138 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04B737A820FF377900A1E138 /* KeychainConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainConfiguration.h; sourceTree = "<group>"; };
+		04B737A920FF377900A1E138 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		04B737AA20FF377900A1E138 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		04B737AD20FF379100A1E138 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		04B737AF20FF387D00A1E138 /* JTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTBaseViewController.m; sourceTree = "<group>"; };
+		04B737B020FF387D00A1E138 /* JTDetailAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTDetailAccountViewController.m; sourceTree = "<group>"; };
+		04B737B120FF387D00A1E138 /* JTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTBaseViewController.h; sourceTree = "<group>"; };
+		04B737B220FF387D00A1E138 /* JTDetailAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTDetailAccountViewController.h; sourceTree = "<group>"; };
+		04B737B520FF397C00A1E138 /* KeyChain.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyChain.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B737AE20FF379100A1E138 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +58,7 @@
 			children = (
 				04B7379020FF370200A1E138 /* KeyChain */,
 				04B7378F20FF370200A1E138 /* Products */,
+				04B737AC20FF379100A1E138 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +73,16 @@
 		04B7379020FF370200A1E138 /* KeyChain */ = {
 			isa = PBXGroup;
 			children = (
+				04B737B520FF397C00A1E138 /* KeyChain.entitlements */,
+				04B737A720FF377900A1E138 /* KeychainWrapper */,
 				04B7379120FF370200A1E138 /* AppDelegate.h */,
 				04B7379220FF370200A1E138 /* AppDelegate.m */,
 				04B7379420FF370200A1E138 /* ViewController.h */,
 				04B7379520FF370200A1E138 /* ViewController.m */,
+				04B737B120FF387D00A1E138 /* JTBaseViewController.h */,
+				04B737AF20FF387D00A1E138 /* JTBaseViewController.m */,
+				04B737B220FF387D00A1E138 /* JTDetailAccountViewController.h */,
+				04B737B020FF387D00A1E138 /* JTDetailAccountViewController.m */,
 				04B7379720FF370200A1E138 /* Main.storyboard */,
 				04B7379A20FF370300A1E138 /* Assets.xcassets */,
 				04B7379C20FF370300A1E138 /* LaunchScreen.storyboard */,
@@ -69,6 +90,24 @@
 				04B737A020FF370300A1E138 /* main.m */,
 			);
 			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		04B737A720FF377900A1E138 /* KeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				04B737A820FF377900A1E138 /* KeychainConfiguration.h */,
+				04B737A920FF377900A1E138 /* KeychainWrapper.h */,
+				04B737AA20FF377900A1E138 /* KeychainWrapper.m */,
+			);
+			path = KeychainWrapper;
+			sourceTree = "<group>";
+		};
+		04B737AC20FF379100A1E138 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04B737AD20FF379100A1E138 /* Security.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +141,11 @@
 				TargetAttributes = {
 					04B7378D20FF370200A1E138 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -142,6 +186,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B7379620FF370200A1E138 /* ViewController.m in Sources */,
+				04B737B420FF387D00A1E138 /* JTDetailAccountViewController.m in Sources */,
+				04B737AB20FF377900A1E138 /* KeychainWrapper.m in Sources */,
+				04B737B320FF387D00A1E138 /* JTBaseViewController.m in Sources */,
 				04B737A120FF370300A1E138 /* main.m in Sources */,
 				04B7379320FF370200A1E138 /* AppDelegate.m in Sources */,
 			);
@@ -283,9 +330,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KeyChain/KeyChain.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CGEWW2EV8;
 				INFOPLIST_FILE = KeyChain/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,9 +349,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KeyChain/KeyChain.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CGEWW2EV8;
 				INFOPLIST_FILE = KeyChain/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
